@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="hospital_patient_report_body">
+            <div class="page">
+                <div class="oe_structure"/>
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <td>Sequence</td>
+                            <td>Name</td>
+                            <td>DNI</td>
+                            <td>State</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="docs" t-as="o">
+                            <tr>
+                                <td><span t-out="o.sequence"/></td>
+                                <td><span t-out="o.name"/></td>
+                                <td><span t-out="o.dni"/></td>
+                                <td><span t-out="o.state"/></td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+        </template>
+
+        <template id="print_hospital_patients">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <t t-call="vertical_hospital.hospital_patient_report_body"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

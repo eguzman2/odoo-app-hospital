@@ -10,9 +10,14 @@
     """,
     'category': 'Specific Industry Applications',
     'version': '15.0.1.0.0',
-    'depends': [],
+    'depends': ['mail', 'web'],
     'data': [
-
+        'security/ir.model.access.csv',
+        'views/hospital_menuitem.xml',
+        'views/hospital_patient_views.xml',
+        'views/hospital_treatment_views.xml',
+        'report/print_hospital_patients.xml',
+        'views/hospital_report.xml'
     ],
     'installable': True,
     'application': True,

@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="action_hospital_patient" model="ir.actions.act_window">
+        <field name="name">Patients</field>
+        <field name="res_model">hospital.patient</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="action_hospital_treatment" model="ir.actions.act_window">
+        <field name="name">Treatments</field>
+        <field name="res_model">hospital.treatment</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+            id="menu_hospital"
+            name="Hospital"
+            web_icon="vertical_hospital,static/description/icon.png">
+        <menuitem id="hospital_menu"
+              name="Hospital"
+              sequence="1">
+            <menuitem id="hospital_patient"
+              name="Patients"
+              action="action_hospital_patient"
+              sequence="1"/>
+
+            <menuitem id="hospital_treatment"
+              name="Treatments"
+              action="action_hospital_treatment"
+              sequence="2"/>
+        </menuitem>
+    </menuitem>
+
+</odoo>

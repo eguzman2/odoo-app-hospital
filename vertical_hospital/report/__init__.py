@@ -1,0 +1,1 @@
+from . import print_hospital_patients
